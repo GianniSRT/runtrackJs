@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; 
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styles de La Plateforme_ */
+.la-plateforme {
+    background-color: #0052CC; 
+    color: white;
+}
+
+.la-plateforme h1 {
+    color: white;
+}
