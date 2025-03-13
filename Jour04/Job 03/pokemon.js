@@ -1,33 +1,65 @@
-document.getElementById("filterButton").addEventListener("click", function () {
-    fetch("pokemon.json")
-        .then(response => response.json())
-        .then(data => {
-            const idFilter = document.getElementById("idInput").value.trim();
-            const nameFilter = document.getElementById("nameInput").value.trim().toLowerCase();
-            const typeFilter = document.getElementById("typeSelect").value;
+document.addEventListener("DOMContentLoaded", function () {
+    chargerTypes();
 
-            // Filtrage des Pokémon
-            const filteredData = data.filter(pokemon => {
-                return (
-                    (idFilter === "" || pokemon.id.toString() === idFilter) &&
-                    (nameFilter === "" || pokemon.nom.toLowerCase().includes(nameFilter)) &&
-                    (typeFilter === "" || pokemon.type === typeFilter)
-                );
-            });
-
-            // Affichage des résultats
-            const resultsContainer = document.getElementById("results");
-            resultsContainer.innerHTML = ""; // Efface les anciens résultats
-
-            if (filteredData.length === 0) {
-                resultsContainer.innerHTML = "<li>Aucun Pokémon trouvé</li>";
-            } else {
-                filteredData.forEach(pokemon => {
-                    const li = document.createElement("li");
-                    li.textContent = `ID: ${pokemon.id}, Nom: ${pokemon.nom}, Type: ${pokemon.type}`;
-                    resultsContainer.appendChild(li);
-                });
-            }
-        })
-        .catch(error => console.error("Erreur de chargement des données :", error));
+    document.getElementById("filterButton").addEventListener("click", filtrerPokemon);
 });
+
+async function chargerTypes() {
+    try {
+        const response = await fetch('pokemon.json'); // Charger les données JSON
+        const data = await response.json();
+        const types = new Set();
+
+        data.forEach(pokemon => {
+            pokemon.type.forEach(type => types.add(type));
+        });
+
+        const select = document.getElementById("typeSelect");
+        types.forEach(type => {
+            const option = document.createElement("option");
+            option.value = type;
+            option.textContent = type;
+            select.appendChild(option);
+        });
+    } catch (error) {
+        console.error("Erreur lors du chargement des types :", error);
+    }
+}
+
+async function filtrerPokemon() {
+    try {
+        const idFiltre = document.getElementById("idInput").value.trim();
+        const nomFiltre = document.getElementById("nameInput").value.toLowerCase().trim();
+        const typeFiltre = document.getElementById("typeSelect").value;
+
+        const response = await fetch('pokemon.json'); // Charger les données JSON
+        const data = await response.json();
+
+        const resultats = data.filter(pokemon => {
+            return (!idFiltre || pokemon.id == idFiltre) &&
+                   (!nomFiltre || pokemon.name.french.toLowerCase().includes(nomFiltre)) &&
+                   (!typeFiltre || pokemon.type.includes(typeFiltre));
+        });
+
+        afficherResultats(resultats);
+    } catch (error) {
+        console.error("Erreur lors du filtrage des Pokémon :", error);
+    }
+}
+
+function afficherResultats(pokemons) {
+    const liste = document.getElementById("pokemonList");
+    liste.innerHTML = "";
+
+    if (pokemons.length === 0) {
+        liste.innerHTML = "<p>Aucun Pokémon trouvé</p>";
+        return;
+    }
+
+    pokemons.forEach(pokemon => {
+        const div = document.createElement("div");
+        div.classList.add("pokemon-item");
+        div.innerHTML = `<strong>${pokemon.name.french}</strong> (ID: ${pokemon.id}) - Type: ${pokemon.type.join(', ')}`;
+        liste.appendChild(div);
+    });
+}

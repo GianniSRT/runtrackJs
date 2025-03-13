@@ -4,35 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filtrer les Pokémon</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="container">
     <h2>Filtrer les Pokémon</h2>
+    <input type="text" id="idInput" placeholder="ID">
+    <input type="text" id="nameInput" placeholder="Nom">
+    <select id="typeSelect">
+        <option value="">-- Type --</option>
+    </select>
+    <button id="filterButton">Filtrer</button>
 
-    <form id="filterForm">
-        <label for="idInput">ID :</label>
-        <input type="text" id="idInput" placeholder="Ex: 1">
-        
-        <label for="nameInput">Nom :</label>
-        <input type="text" id="nameInput" placeholder="Ex: Pikachu">
+    <div class="pokemon-list" id="pokemonList"></div>
+</div>
 
-        <label for="typeSelect">Type :</label>
-        <select id="typeSelect">
-            <option value="">-- Tous --</option>
-            <option value="Électrique">Électrique</option>
-            <option value="Feu">Feu</option>
-            <option value="Plante">Plante</option>
-            <option value="Eau">Eau</option>
-            <option value="Normal">Normal</option>
-        </select>
-
-        <button type="button" id="filterButton">Filtrer</button>
-    </form>
-
-    <h3>Résultats :</h3>
-    <ul id="results"></ul>
-
-    <script src="pokemon.js"></script>
-
+<script src="pokemon.js"></script>
 </body>
 </html>
