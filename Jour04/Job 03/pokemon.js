@@ -60,6 +60,6 @@ function afficherResultats(pokemons) {
         const div = document.createElement("div");
         div.classList.add("pokemon-item");
         div.innerHTML = `<strong>${pokemon.name.french}</strong> (ID: ${pokemon.id}) - Type: ${pokemon.type.join(', ')}`;
-        liste.appendChild(div);
+        liste.appendChild(div); 
     });
 }

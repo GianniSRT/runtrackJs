@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaPlateforme_</title>
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-light bg-light px-4">
+        <a class="navbar-brand">LPTF</a>
+        <div>
+            <a id="accueilLink" class="nav-link d-inline" href="https://laplateforme.io/" target="_blank">Accueil</a>
+            <a class="nav-link d-inline" href="#">Units</a>
+            <a class="nav-link d-inline" href="#">Jobs</a>
+            <a class="nav-link d-inline" href="#">Skills</a>
+        </div>
+    </nav>
+
+    <!-- Titre centré en haut -->
+    <div class="text-center mt-3">
+        <h1 class="fw-bold">LaPlateforme_</h1>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Card du papillon -->
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images papillon/papilllon.jpg" class="card-img-top" alt="Papillon">
+                    <div class="card-body">
+                        <h5 class="card-title">Un Papillon</h5>
+                        <p class="card-text">Un papillon, c'est un peu comme une chenille, mais avec des ailes. <br><strong>Ne pas ingérer</strong></p>
+                        <button class="btn btn-primary" id="buyPapillon">Commander votre papillon</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section principale -->
+            <div class="col-md-6">
+                <div class="p-4 bg-light rounded">
+                    <h1 class="fw-bold">Bonjour, monde!</h1>
+                    <p class="text-muted">Il existe plusieurs visions du terme :</p>
+                    <p>
+                        Le monde est la matière, l’espace et les phénomènes qui nous sont accessibles par les sens, 
+                        l’expérience ou la raison.
+                    </p>
+                    <p>Le sens le plus courant désigne notre planète, la Terre, avec ses habitants, et son environnement plus ou moins naturel.</p>
+                    <p class="text-danger"><i>Le sens étendu désigne l'univers dans son ensemble.</i></p>
+                    <button id="rebootBtn" class="btn btn-danger">
+                        Rebooter le Monde 
+                        <span id="spinner" class="spinner-border spinner-border-sm d-none"></span>
+                    </button>
+                </div>
+
+                <!-- Pagination -->
+                <nav class="mt-3">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">«</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">»</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Liste des Limbes à droite -->
+            <div class="col-md-3">
+                <ul class="list-group">
+                    <li class="list-group-item active">Limbes</li>
+                    <li class="list-group-item">Luxure</li>
+                    <li class="list-group-item">Gourmandise</li>
+                    <li class="list-group-item">Avarice</li>
+                    <li class="list-group-item">Colère</li>
+                    <li class="list-group-item">Hérésie</li>
+                    <li class="list-group-item">Violence</li>
+                    <li class="list-group-item">Ruse et Tromperie</li>
+                    <li class="list-group-item">Trahison</li>
+                    <li class="list-group-item">Internet Explorer</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Barre de progression -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <p class="fw-bold text-center">Installation de AI 9000</p>
+                <div class="progress">
+                    <div id="progressBar" class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h5>Recevez votre copie gratuite d'Internet 2!</h5>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">@</span>
+                    <input type="text" id="login" class="form-control" placeholder="Login">
+                </div>
+                <div class="input-group mb-2">
+                    <input type="password" id="password" class="form-control" placeholder="Mot de passe">
+                    <span class="input-group-text">@example.com</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input type="email" id="email" class="form-control mb-2" placeholder="Email address">
+                <input type="password" id="formPass" class="form-control mb-2" placeholder="Password">
+                <button id="submitBtn" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
