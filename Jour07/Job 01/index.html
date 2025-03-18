@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Inscription</title>
+</head>
+
+<body>
+    <!-- Header avec la navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html">Inscription</a></li>
+                <li><a href="index.html">Connexion</a></li>
+                <li><a href="index.html">Rechercher</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section avec le formulaire de création de compte -->
+    <section>
+        <h2>Créer un compte</h2>
+        <form action="#" method="POST">
+            <!-- Civilité -->
+            <div>
+                <label>Civilité :</label>
+                <input type="radio" id="m" name="civilite" value="Monsieur">
+                <label for="m">Monsieur</label>
+                <input type="radio" id="mme" name="civilite" value="Madame">
+                <label for="mme">Madame</label>
+            </div>
+
+            <!-- Prénom et Nom -->
+            <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+
+            <!-- Adresse -->
+            <div>
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" required>
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Mot de passe et confirmation -->
+            <div>
+                <label for="motdepasse">Mot de passe :</label>
+                <input type="password" id="motdepasse" name="motdepasse" required>
+
+                <label for="confirmation">Confirmer le mot de passe :</label>
+                <input type="password" id="confirmation" name="confirmation" required>
+            </div>
+
+            <!-- Passions -->
+            <div>
+                <label>Passions :</label>
+                <input type="checkbox" id="informatique" name="passions" value="Informatique">
+                <label for="informatique">Informatique</label>
+
+                <input type="checkbox" id="voyages" name="passions" value="Voyages">
+                <label for="voyages">Voyages</label>
+
+                <input type="checkbox" id="sport" name="passions" value="Sport">
+                <label for="sport">Sport</label>
+
+                <input type="checkbox" id="lecture" name="passions" value="Lecture">
+                <label for="lecture">Lecture</label>
+            </div>
+
+            <!-- Bouton de soumission -->
+            <div>
+                <button type="submit">Valider</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">Inscription</a></li>
+            <li><a href="index.html">Connexion</a></li>
+            <li><a href="index.html">Rechercher</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

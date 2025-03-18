@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Cartes</title>
+    <!-- CDN Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Optionnel : Ajouter un style personnalisé -->
+    <style>
+        .card-title {
+            font-size: 1.5rem;
+        }
+        .card-content p {
+            font-size: 1rem;
+        }
+        .card-image img {
+            object-fit: cover;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header avec la navigation -->
+    <header>
+        <nav class="blue">
+            <div class="nav-wrapper container">
+                <!-- Logo -->
+                <a href="#" class="brand-logo">MonLogo</a>
+                <!-- Liens de navigation -->
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Corps de la page avec des cartes -->
+    <div class="container">
+        <h2 class="center-align">Découvrez Nos Cartes</h2>
+        
+        <!-- Row pour organiser les cartes -->
+        <div class="row">
+            <!-- Carte de petite taille -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="petite.jpeg" alt="Image 1">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Carte 1</span>
+                        <p>Ceci est une carte de petite taille. Elle contient des informations intéressantes.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte de taille moyenne -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="moyenne.jpeg" alt="Image 2">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Carte 2</span>
+                        <p>Ceci est une carte de taille moyenne. Elle contient un peu plus d'informations.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte de grande taille -->
+            <div class="col s12 m4">
+                <div class="card large">
+                    <div class="card-image">
+                        <img src="grande.jpeg" alt="Image 3">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Carte 3</span>
+                        <p>Ceci est une carte de grande taille. Elle permet d'afficher plus de détails et d'informations.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Une autre ligne de cartes -->
+        <div class="row">
+            <!-- Carte de petite taille -->
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/400x200" alt="Image 4">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Carte 4</span>
+                        <p>Une autre carte de petite taille avec des informations supplémentaires.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte de grande taille -->
+            <div class="col s12 m6">
+                <div class="card large">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/400x200" alt="Image 5">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Carte 5</span>
+                        <p>Carte de grande taille pour mettre en avant des informations spécifiques ou une offre.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer avec liens supplémentaires -->
+    <footer class="blue lighten-1 page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <ul class="inline-list">
+                        <li><a href="#" class="white-text">Mentions légales</a></li>
+                        <li><a href="#" class="white-text">Politique de confidentialité</a></li>
+                        <li><a href="#" class="white-text">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CDN Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
