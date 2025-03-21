@@ -1,0 +1,8 @@
+{
+    "users": [
+      { "email": "admin@laplateforme.fr", "password": "admin123", "role": "admin" },
+      { "email": "moderator@laplateforme.fr", "password": "mod123", "role": "moderator" }
+    ],
+    "requests": []
+  }
+  
